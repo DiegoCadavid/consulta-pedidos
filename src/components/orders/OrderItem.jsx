@@ -14,7 +14,7 @@ const OrderItem = ({
   return (
     <div className="bg-zinc-50">
       {/* Header */}
-      <div className="p-2 pt-4 flex gap-9 bg-zinc-100 border-b-2 border-zinc-300">
+      <div className="p-2 pt-4 flex gap-9 text-sm md:text-base bg-zinc-100 border-b-2 border-zinc-300">
         <p>
           {" "}
           Numero de pedido:{" "}
@@ -23,13 +23,13 @@ const OrderItem = ({
         <p> Fecha: 15-10-2022 </p>
       </div>
 
-      <div className="columns-2 pb-8">
+      <div className="columns-1 md:columns-2 md:pb-8">
         <div className="px-3">
           <table className="table-fixed w-full">
             <tbody>
               <OrderItemValue name={"NIT"} value={nit} />
-              <OrderItemValue name={"Estado"} value={status} />
-              <OrderItemValue name={"Factura"} value={bill} bold={true} />
+              <OrderItemValue name={"Estado"} value={status} bold={true} />
+              <OrderItemValue name={"Factura"} value={bill} />
               <OrderItemValue name={"Guia"} value={guide} />
             </tbody>
           </table>

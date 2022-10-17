@@ -38,8 +38,8 @@ const OrdersContainer = () => {
   return (
     <>
       {!isLoading ? (
-        <div className="flex-grow flex flex-col gap-8 mx-16 py-8">
-          <div className="text-durespo-100 font-medium text-xl">
+        <div className="flex-grow flex flex-col gap-4 md:gap-6  mx-4 md:mx-16 py-8">
+          <div className="text-durespo-100 font-medium text-lg md:text-xl">
             Pedidos de {orderId}
           </div>
           {data.map(

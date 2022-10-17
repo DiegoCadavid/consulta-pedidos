@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef} from "react";
 import { useForm } from "react-hook-form";
 import OrdersContext from "../contexts/ordersContext";
 
@@ -7,6 +7,7 @@ const Search = () => {
     register,
     handleSubmit: handleHookSubmit,
     formState: { errors },
+    setFocus
   } = useForm();
   const inputRef = useRef(null);
 
@@ -14,10 +15,8 @@ const Search = () => {
 
   // Al inciar hacemos que el input este en focus
   useEffect(() => {
-    if (inputRef.current != null) {
-      inputRef.current.focus();
-    }
-  }, [inputRef.current]);
+    setFocus('doc')
+  }, [setFocus]);
 
   const handleSubmit = (data) => {
     // Validamos la entrada del usuario ( la mayoria de las validaciones se hace con useForm)
@@ -31,19 +30,18 @@ const Search = () => {
   return (
     <div className="flex-grow flex flex-col gap-8 items-center justify-center">
       <div className="text-center">
-        <h3 className="text-3xl font-bold">Consulta pedidos</h3>
-        <p className="font-medium text-zinc-600">
+        <h3 className="text-xl md:text-3xl font-bold">Consulta pedidos</h3>
+        <p className="font-medium text-sm md:text-base text-zinc-600">
           {" "}
           Ingrese su numero de celula o NIT sin digito de verificacion{" "}
         </p>
       </div>
 
-      <div className="max-w-2xl w-full ">
+      <div className=" max-w-sm text-sm md:text-base md:max-w-2xl w-full ">
         <form
           onSubmit={handleHookSubmit(handleSubmit)}
-          className="max-w-2xl w-full flex  justify-center gap-2">
+          className="max-w-sm md:max-w-2xl w-full flex  justify-center gap-2">
           <input
-            ref={inputRef}
             {...register("doc", {
               minLength: {
                 value: 4,

@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="p-5 bg-zinc-200">
-      <p className="text-durespo-100 font-medium">
+    <div className="p-5 bg-zinc-200 text-sm md:text-base">
+      <p className="text-durespo-100 font-medium pb-3">
         Para una mayor informacion contactese con las siguientes lineas
       </p>
       <p>Whatsapp: 311 636 35 39</p>
