@@ -51,7 +51,7 @@ const Search = () => {
                 message: "Maximo 15 caracteres",
               },
             })}
-            className="p-2 rounded-full px-4 w-full outline-none ring-0 focus:ring-1 ring-durespo-100 transition-all ease-out"
+            className={`p-2 rounded-full px-4 w-full outline-none transition-colors ease-out ${ errors.doc ? "ring-2 ring-red-600" : "ring-1 focus:ring-durespo-100" }`}
             type="number"
             id="inputDoc"
             placeholder="Ingrese su numero de celula o NIT"
