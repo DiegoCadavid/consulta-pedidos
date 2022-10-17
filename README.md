@@ -19,7 +19,7 @@ Por un problema del **cors** lo que me evitaba el acceso al servidor de Durespo 
  useEffect(() => {
     setIsLoading(true);
 
-    // Aqui se realizaria la http response
+    // Aqui se realizaria la peticcion http
     setTimeout(() => {
 
       if(errorHttpFake) {
