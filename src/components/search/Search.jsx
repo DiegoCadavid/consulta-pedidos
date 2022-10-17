@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef} from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import OrdersContext from "../contexts/ordersContext";
 
@@ -9,7 +9,6 @@ const Search = () => {
     formState: { errors },
     setFocus
   } = useForm();
-  const inputRef = useRef(null);
 
   const OrderCtx = useContext(OrdersContext);
 
