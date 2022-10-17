@@ -64,7 +64,7 @@ const OrdersContainer = () => {
       );
 
       setIsLoading(false);
-    }, 100);
+    }, 2000);
   }, [orderId]);
 
   useEffect(() => {
