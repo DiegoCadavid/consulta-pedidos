@@ -3,6 +3,7 @@ import OrderItemValue from "./OrderItemValue";
 
 const OrderItem = ({
   nit = "",
+  orderId,
   status = "",
   bill = "",
   guide = "",
@@ -24,9 +25,9 @@ const OrderItem = ({
         <p>
           {" "}
           Numero de pedido:{" "}
-          <span className="text-durespo-100 font-medium"> 000000 </span>
+          <span className="text-durespo-100 font-medium"> {orderId} </span>
         </p>
-        <p> Fecha: 15-10-2022 </p>
+        <p> Fecha: { date } </p>
       </div>
 
       <div className="columns-1 md:columns-2 md:pb-8">

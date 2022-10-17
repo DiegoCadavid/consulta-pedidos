@@ -141,6 +141,7 @@ const OrdersContainer = () => {
                 return (
                   <OrderItem
                     key={`${pedido}${i}`}
+                    orderId={pedido }
                     nit={nit}
                     status={estado}
                     bill={factura}
