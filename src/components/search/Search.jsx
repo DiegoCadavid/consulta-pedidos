@@ -18,11 +18,6 @@ const Search = () => {
   }, [setFocus]);
 
   const handleSubmit = (data) => {
-    // Validamos la entrada del usuario ( la mayoria de las validaciones se hace con useForm)
-    if (data.doc.trim() == "") {
-      return;
-    }
-
     OrderCtx.setOrderDoc(data.doc);
   };
 
@@ -50,6 +45,10 @@ const Search = () => {
                 value: 15,
                 message: "Maximo 15 caracteres",
               },
+              required: {
+                value: true,
+                message: "Este campo es obligatorio"
+              }
             })}
             className={`p-2 rounded-full px-4 w-full outline-none transition-colors ease-out ${ errors.doc ? "ring-2 ring-red-600" : "ring-1 focus:ring-durespo-100" }`}
             type="number"
