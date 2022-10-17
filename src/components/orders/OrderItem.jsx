@@ -10,9 +10,15 @@ const OrderItem = ({
   date = "",
   transporter = "",
   direction = "",
+  delayFade = 0
 }) => {
   return (
-    <div className="bg-zinc-50">
+    <div className="bg-zinc-50 opacity-0" style={{
+      animationName: "fade",
+      animationDuration: ".5s",
+      animationDelay: `${delayFade}ms`,
+      animationFillMode : "forwards"
+    }}>
       {/* Header */}
       <div className="p-2 pt-4 flex gap-9 text-sm md:text-base bg-zinc-100 border-b-2 border-zinc-300">
         <p>

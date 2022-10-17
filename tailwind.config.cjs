@@ -12,6 +12,19 @@ module.exports = {
           200: "#963F00"
         },
         "background" : "#ECECEC"
+      },
+      "animation": {
+        fade: "fade 0.3s 1"
+      },
+      "keyframes" : {
+        fade : {
+          "0%" :{
+            opacity : 0
+          },
+          "100%" : {
+            opacity : 1
+          }
+        }
       }
     },
   },
