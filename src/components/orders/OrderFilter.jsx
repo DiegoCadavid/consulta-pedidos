@@ -43,7 +43,7 @@ const OrderFilter = ({ dataElements = [], setFilters }) => {
         </svg>
       </button>
       {showDropdown && (
-        <div className="absolute z-10 right-0 p-3 bg-zinc-100 shadow-md rounded-md text-sm animate-fade ">
+        <div className="absolute z-10 right-0 mt-2 p-3 bg-zinc-100 shadow-md rounded-md text-sm animate-fade ">
           <form
             onSubmit={handleHookSubmit(handleSubmit)}
             className="text-zinc-700 flex flex-col gap-2">
