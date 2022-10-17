@@ -1,0 +1,4 @@
+{
+  "server" : "http://app.durespo.com.co:8282/AlaskaApi",
+  "ordenes_pedidos" : "api/OrdenesDePedidos"
+}
