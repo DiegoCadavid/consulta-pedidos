@@ -50,7 +50,7 @@ const Search = () => {
                 message: "Este campo es obligatorio"
               }
             })}
-            className={`p-2 rounded-full px-4 w-full outline-none transition-colors ease-out ${ errors.doc ? "ring-2 ring-red-600" : "ring-1 focus:ring-durespo-100" }`}
+            className={`p-2 rounded-full px-4 w-full outline-none transition-colors ease-out ${ errors.doc ? "ring-2 ring-red-600" : "focus:ring-1 focus:ring-durespo-100" }`}
             type="number"
             id="inputDoc"
             placeholder="Ingrese su numero de celula o NIT"
